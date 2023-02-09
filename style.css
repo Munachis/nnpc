@@ -1,0 +1,868 @@
+@font-face {
+    font-family: 'ne-reg';
+    src: url(images/NeueMontreal-Regular.otf);
+}
+@font-face {
+    font-family: 'ne-med';
+    src: url(images/NeueMontreal-Medium.otf);
+}
+@font-face {
+    font-family: 'ne-bold';
+    src: url(images/NeueMontreal-Bold.otf);
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'ne-med';
+    text-decoration: none;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 13vh;
+    position: sticky;
+    top: 0;
+    justify-content: center;
+    background-color: white;
+    z-index: 100;
+}
+nav img{
+    width: 100px;
+}
+.navlist{
+    width: 80%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    align-items: center;
+}
+.navlist a,.navlist1 a{
+    text-decoration: none;
+    color: rgb(0,1,0);
+}
+.contact{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.contact span{
+    background-color: rgb(0,64,16);
+    color: white;
+    padding: 11.5px 20px;
+}
+.contact p{
+    background-color: rgb(0,64,16);
+    color: white;
+    font-size: 14px;
+    padding: 15px 40px;
+    letter-spacing: 1px;
+}
+.hero{
+    max-width: 100vw;
+    height: 89vh;
+}
+.carousel{
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+}
+.carousel_track-container{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transition: transform 250ms ease-in;
+}
+.left, .right{
+    cursor: pointer;
+}
+.carousel::-webkit-scrollbar{
+    height: 0px;
+    width: 0px;
+}
+.slide{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    padding-left: 15%;
+    gap: 30px;
+}
+.slide:nth-child(1){
+    padding-top: 30px;
+    background-size: cover;
+    background-color: rgb(0,0,0,0.5);
+    background-position: center;
+    background-blend-mode: darken;
+    background-image: url(images/heroimg.jpeg);
+}
+.slide:nth-child(2){
+    background-image: url(images/customer_focus.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0,0,0,0.5);
+    background-blend-mode: darken;
+}
+.slide:nth-child(3){
+    background-image: url(images/energy-for-today.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0,0,0,0.5);
+    background-blend-mode: darken;
+}
+.slide:nth-child(4){
+    background-image: url(images/development.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0,0,0,0.5);
+    background-blend-mode: darken;
+}
+.slide:nth-child(5){
+    background-image: url(images/largest\ energy\ company.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(0,0,0,0.5);
+    background-blend-mode: darken;
+}
+.slide:nth-child(5) .firstsec{
+    gap: 30px;
+}
+.slide:nth-child(4) .firstsec{
+    gap: 40px;
+}
+.slide:nth-child(2) .firstsec h2{
+    width: 450px;
+}
+.slide:nth-child(3) .firstsec h2{
+    width: 520px;
+}
+.slide:nth-child(4) .firstsec h2{
+    width: 320px;
+}
+.slide:nth-child(5) .firstsec h2{
+    width: 350px;
+}
+.hero a{
+    text-decoration: none;
+}
+.hero .contact p{
+    background-color: white;
+    color: rgb(0,1,0);
+    padding: 25px 30px;
+}
+.firstsec{
+    display: flex;
+    align-items: center;
+    width: 80%;
+}
+.firstsec h2{
+    font-size: 54px;
+    line-height: 66px;
+    width: 400px;
+    font-family: 'ne-bold';
+    font-family: 700;
+    color: white;
+}
+.firstsec p{
+    width: 280px;
+    font-size: 22px;
+    line-height: 34px;
+    font-family: 'ne-reg';
+    color: white;
+}
+.hero .contact span{
+    color: rgb(0,1,0);
+    background-color: white;
+    padding: 21.5px;
+}
+.arrows{
+    display: flex;
+    gap: 10px;
+}
+.arrows span{
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgb(249,231,69);
+}
+.green{
+    color: rgb(29,103,49);
+    font-family: 'ne-bold';
+}
+.bhero{
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    gap: 20px;
+}
+.bherosec{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0px;
+    padding-left: 10%;
+}
+.bherosec img{
+    border-right: 1px solid rgb(229,231,232);
+    width: 20%;
+}
+.founded{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.founded p{
+    font-size: 14px;
+    color: rgba(2,20,37,0.32);
+    line-height: 16.8px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.founded h2{
+    font-size: 50px;
+    width: 70%;
+    font-weight: 700;
+    font-family: 'ne-bold';
+    line-height: 60px;
+}
+.bsec1,.bsec2{
+    border: 1px solid black;
+    width: 40%;
+}
+.bherosec2{
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+}
+.bsec1,.bsec2{
+    position: relative;
+    top: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.bsec1 img{
+    width: 117px;
+    height: 55px;
+    border-left: 1px solid rgb(229,231,232);
+    border-right: 1px solid rgb(229,231,232);
+    padding: 0px 40px;
+}
+.bsec2 img{
+    width: 117px;
+    height: 55px;
+    border-left: 1px solid rgb(229,231,232);
+    border-right: 1px solid rgb(229,231,232);
+    padding: 0px 30px;
+}
+.num{
+    display: flex;
+    align-items: flex-start;
+}
+.num p{
+    font-size: 20px;
+    font-weight: 400;
+}
+.num h1{
+    font-family: 'ne-med';
+    font-size: 65px;
+    line-height: 78px;
+    font-weight: 500;
+}
+.bsec1 p,.bsec2 p{
+    font-family: 'ne-reg';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+}
+.mid{
+    background-image: url(images/44.PNG);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 88vh;
+    z-index: 20;
+}
+.contracts .invest{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    height: 50vh;
+    display: none;
+}
+.contracts .invest h2{
+    font-size: 12px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    font-family: 'ne-reg';
+}
+.invest img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+.topinvest{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    justify-content: center;
+    height: 50%;
+    background-color: rgb(242,243,243);
+    gap: 30px;
+    align-items: flex-start;
+}
+.topinvest h2{
+    font-size: 16px;
+}
+.topinvest p{
+    font-size: 25px;
+}
+.crude_grid{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-content: flex-end;
+    gap: 30px;
+}
+.crude_card{
+    width: 100%;
+    background-color: white;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid black;
+}
+.crude_card p{
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    color: rgb(0,0,0,0.25);
+}
+.post p{
+    font-size: 12px;
+    color: rgb(29,103,49);
+}
+.post span{
+    font-size: 45px;
+}
+.post{
+    display: flex;
+    align-items: center;
+    gap: 50%;
+}
+.crude_card h2{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: 'ne-reg';
+}
+.crudeoil{
+    display: flex;
+    width: 100%;
+    height:60vh;
+    gap: 30px;
+}
+.crude-img{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.rep{
+    display: flex;
+    align-items: center;
+    gap: 34%;
+    border-bottom: 2px solid black;
+}
+.rep p{
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: rgb(0,0,0,0.25);
+}
+.crude-img a{
+    background-color: rgb(249,231,69);
+    padding: 20px 30px;
+    color: rgb(0,1,0);
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+.crude-img img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+}
+.bmidsec{
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.miss{
+    font-size: 30px;
+    line-height: 102px;
+    font-weight: 400;
+    font-family: 'ne-reg';
+    border-bottom: 2px solid black;
+}
+.crude_card:nth-child(1):hover{
+    gap: 0px;
+    background-image: url(images/nnpc_acquire_ovh_00_2e2943be88.jpg);
+    background-position: center;
+    background-color: rgb(255,255,255,0.5);
+    background-blend-mode: lighten;
+    background-size: cover;
+    transition: 0.5s;
+}
+.crude_card:nth-child(2):hover,.crude_card:nth-child(3):hover{
+    gap: 0px;
+    background-image: url(images/nnpc_does_not_operate_secret_account_6f8219544b.jpeg);
+    background-position: center;
+    background-color: rgb(255,255,255,0.5);
+    background-blend-mode: lighten;
+    background-size: cover;
+    transition: .5s;
+}
+.crude_card:nth-child(4):hover{
+    gap: 0px;
+    background-image: url(images/nigeria_morocco_gas_pipeline_01_a49e3572a3.jpeg);
+    background-position: center;
+    background-color: rgb(255,255,255,0.5);
+    background-blend-mode: lighten;
+    background-size: cover;
+    transition: .5s;
+}
+.contracts .contact p{
+    background-color: rgb(3,20,27);
+    color: rgb(194,230,54);
+    padding: 24px;
+}
+.contracts .contact{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.contracts .contact span{
+    background-color: rgb(3,20,27);
+    padding: 20px;
+}
+.contracts h2{
+    font-size: 27px;
+    font-family: 'ne-reg';
+    font-weight: 100;
+}
+.contracts{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 30px;
+}
+.firstimg{
+    padding-top: 100px;
+    display: block;
+}
+.nnpclogo{
+    display: flex;
+    gap: 10px;
+}
+.nnpclogo img{
+    width: 60px;
+    height: 40px;
+}
+.nnpc_text{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 15px;
+}
+.navlist1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 30;
+    justify-content: center;
+    transition: .5s;
+    gap: 10%;
+    background-color: white;
+    height: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    display: none;
+}
+footer{
+    background-color: rgb(3,20,27);
+    height: 85vh;
+    display: flex;
+    width: 100%;
+}
+.natgas{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.natgas span{
+    color: white;
+}
+.footersec1 h4{
+    color: rgb(229,231,232);
+    font-weight: 500;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    font-size: 13px;
+}
+.footersec1{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 25%;
+    border-right: 1px solid rgb(56, 56, 56);
+}
+.footersec2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.footergrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 100%;
+}
+.footer-grid-card{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: 100%;
+    border-right: 1px solid rgb(56, 56, 56);
+    padding: 30px;
+}
+.footer-grid-card h2{
+    color: rgb(249,231,69);
+    border-bottom: 1px solid rgb(56, 56, 56);
+    font-weight: 100;
+    padding-bottom: 30px;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+.footer-grid-card p{
+    color: white;
+    font-size: 15px;
+}
+.topfootersec{
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgb(56, 56, 56);
+    align-items: center;
+    height: 20vh;
+    gap: 20%;
+}
+.navlist1 a{
+    font-family: 'ne-med';
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.navlist1 .contact{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+}
+.navlist1 .contact p{
+    background-color: rgb(0,64,16);
+    color: white;
+    font-size: 14px;
+    padding: 15px 40px;
+    letter-spacing: 1px;
+}
+.navlist1 .contact span{
+    background-color: rgb(0,64,16);
+    color: white;
+    padding: 11.5px 20px;
+}
+.inputbar{
+    display: flex;
+    padding-bottom: 20px;
+    border-bottom: 2px solid white;
+    width: 40%;
+    gap: 50%;
+}
+.inputbar span{
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.inputbar input{
+    background-color: rgb(3,20,27);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: 'ne-reg';
+    color: white;
+}
+.inputbar input::placeholder{
+    color: white;
+}
+.topfootersec p{
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: 500;
+    font-family: 'ne-reg';
+    color: white;
+}
+.social{
+    display: flex;
+    gap: 20px;
+}
+.social img{
+    width: 22px;
+    height: 22px;
+    padding: 3px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+.grid2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.menu{
+    display: none;
+    flex-direction: column;
+    height: max-content;
+    gap: 6px;
+    font-weight: 700;
+    border-radius: 0px;
+    cursor: pointer;
+}
+.line{
+    height: 5px;
+    border-radius: 50px;
+    background-color: rgb(76, 75, 78);
+    width: 35px;
+}
+@media only screen and (max-width:1200px){
+    footer{
+        flex-direction: column;
+        height: max-content;
+    }
+    .footersec1{
+        gap: 20px;
+    }
+    .natgas img{
+        width: 50%;
+    }
+    .footersec2{
+        border-top: 1px solid rgb(56, 56, 56);
+    }
+    .footersec1 h4{
+        display: none;
+    }
+    .topfootersec{
+        gap: 10%;
+    }
+}
+@media only screen and (max-width:1000px){
+    .navlist{
+        gap: 15px;
+        width: 89%;
+    }
+    .navlist a{
+        font-size: 14px;
+    }
+    .slide{
+        padding-left: 5%;
+        padding-bottom: 27%;
+    }
+    .firstsec{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .firstsec h2{
+        width: 290px;
+        font-size: 45px;
+        line-height: normal;
+    }
+    .firstsec p{
+        font-size: 22px;
+        width: 100%;
+        padding-right: 40px;
+    }
+    .founded h2{
+        font-size: 40px;
+    }
+    .navlist .contact p{
+        padding: 15px 20px;
+    }
+    .navlist .contact span{
+        padding: 11.5px 20px;
+    }
+    .crude_card h2{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width:868px){
+    .menu{
+        display: flex;
+    }
+    .crudeoil{
+        flex-direction: column;
+        height: fit-content;
+    }
+    nav{
+        padding: 0px 20px;
+        height: 9.7vh;
+    }
+    .navlist a{
+        display: none;
+    }
+    .navlist{
+        width: 80%;
+    }
+    .bherosec{
+        display: flex;
+        flex-direction: column;
+    }
+    .bherosec img{
+        border-right: none;
+    }
+    .founded h2{
+        width: 100%;
+    }
+    .topfootersec{
+        gap: 5%;
+    }
+    .crude-img,.crude_grid{
+        width: 100%;
+    }
+    .footergrid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@media only screen and (max-width:740px){
+    .bherosec2{
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        padding: 0px 30px;
+    }
+    .bsec1,.bsec2{
+        width: 100%;
+    }
+}
+@media only screen and (max-width:540px){
+    .founded h2{
+        font-size: 30px;
+        font-family: 'ne-med';
+        letter-spacing: 0.2px;
+    }
+    .founded span{
+        font-size: 30px;
+        font-family: 'ne-med';
+        letter-spacing: 0.2px;
+    }
+    .hero{
+        justify-content: center;
+    }
+    .upto{
+        font-size: 25px !important;
+    }
+    .contact1{
+        width: max-content;
+    }
+    .arrows{
+        position: absolute;
+        bottom: 70px;
+    }
+    .contact1{
+        width: 236px;
+        height: 54px;
+    }
+    .contact1 p{
+        font-size: 12px !important;
+        font-weight: 100 !important;
+        letter-spacing: 3px !important;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 23px 20px !important;
+        height: 100%;
+    }
+    .contact1 span{
+        padding: 23px 20px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    .miss{
+        font-size: 25px;
+    }
+    .topfootersec{
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px;
+        gap: 30px;
+    }
+    .crude_grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .crude_card:hover{
+        gap: 2em !important ;
+        background-image: none !important;
+        background-color: none;
+        background-blend-mode: normal;
+        transition: none;
+    }
+    .crude-img{
+        height: 320px;
+    }
+    .contracts .contact{
+        justify-content: center;
+    }
+    .lim{
+        display: none;
+    }
+    .contracts .invest{
+        display: flex;
+    }
+    .contracts .firstimg{
+        display: none;
+    }
+}
+@media only screen and (max-width:480px){
+    body{
+        overflow-x: hidden;
+    }
+    .firstsec h2{
+        font-size: 36px;
+        line-height: 44px;
+        width: 235px;
+    }
+    .slide:nth-child(4) .firstsec h2{
+        width: 220px;
+    }
+    .slide:nth-child(2) .firstsec h2{
+        width: 270px;
+    }
+}
